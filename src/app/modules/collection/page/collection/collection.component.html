@@ -1,0 +1,31 @@
+<app-image-grid 
+  [thumbImgArr] = "thumbImgArr" 
+  [title] = "thumbImgArr[0]?.img_title" 
+  [gridActionName] = "'Download All'"
+  (thumbImgClick)="downloadImg($event)"
+  (gridActionClick)="downloadWallPapers()">
+</app-image-grid>
+<!-- <div class="row">
+    <div class="col">
+      <span class="d-flex justify-content-center">
+        <h4 >{{thumbImgArr[0]?.img_title}} <button class="btn btn-link" (click)="downloadWallPapers()">Download All</button></h4>
+      </span>
+      
+    </div>
+  </div>
+  <div class="row mx-1">
+    <div *ngFor="let imgThumb of thumbImgArr" class="col">
+      <div class="row">
+        <div class="col px-0 d-flex justify-content-center">
+          
+            <img src="{{imgThumb.img_url}}" alt="{{imgThumb.img_title}}" (dblclick)="downloadImg(imgThumb.download_url)">
+                       
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col px-0 d-flex justify-content-center">
+          <p class="img-desc">{{imgThumb.img_title}}</p>
+        </div>     
+      </div>
+    </div>
+  </div> -->

@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('./assets/images/site-bg.jpg');
+}
+
+.btn-outline-primary {
+    color: #44d2e8 !important;
+    border-color: #44d2e8 !important;
+}

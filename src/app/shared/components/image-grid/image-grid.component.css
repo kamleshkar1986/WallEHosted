@@ -1,0 +1,22 @@
+.img-desc,.thumb-container {
+    font-size: 0.8rem;
+    color: #7bd0de;
+    background-color: #0000007d;
+  }
+  
+  h4 {
+    color: #7bd0de;
+  }
+  
+  .img-grid {
+    background-color: #ffffff42;
+  }
+  
+  .img-thumb {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .collection-title {
+    background-color: #0000007d;
+  }

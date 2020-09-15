@@ -1,0 +1,18 @@
+{
+    "/santabanta": {
+      "target": "https://www.santabanta.com",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/santabanta": ""
+      }
+    },
+    "/media.santabanta": {
+      "target": "https://media1.santabanta.com",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/media.santabanta": ""
+      }
+    }
+  }

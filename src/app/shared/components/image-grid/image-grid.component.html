@@ -1,0 +1,31 @@
+<div class="row img-grid my-3 pt-3 px-1 px-sm-2 mx-1 mx-sm-3 mb-5 rounded">
+    <div class="col-12 pt-2 my-0 d-flex justify-content-center collection-title rounded">  
+        <div class="row">
+          <div *ngIf="showPrevNextBtn" class="col px-1 mb-1">
+            <button class="btn btn-outline-primary btn-sm justify-content-center" (click)="prevClick()">&lt;&lt;</button>    
+          </div>
+          <h4>{{title}} 
+            <button 
+              *ngIf="gridActionName"  
+              class="btn btn-outline-primary btn-sm ml-2"
+              (click)="gridWideAction()">{{gridActionName}}
+            </button>
+          </h4>  
+          <div *ngIf="showPrevNextBtn" class="col px-1 mb-1">
+            <button class="btn btn-outline-primary btn-sm justify-content-center" (click)="nextClick()">&gt;&gt;</button>    
+          </div>
+        </div>
+    </div>
+    <div class="row pt-3 px-1 px-sm-2 mx-1 mx-sm-3 mb-5">
+      <div *ngFor="let imgThumb of thumbImgArr" class="col-6 col-md-4 col-lg-3 col-xl-2 px-1 my-1">
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <a class="thumb-container rounded-lg" (click)="openCollection(imgThumb)">
+              <img class="img-fluid rounded-top img-thumb" src="{{imgThumb.img_url}}" alt="{{imgThumb.img_title}}" onerror="this.parentNode.parentNode.parentNode.parentNode.style.display='none'"> 
+              <p class="px-2 pt-3">{{imgThumb.img_title}}</p>
+            </a>                
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>

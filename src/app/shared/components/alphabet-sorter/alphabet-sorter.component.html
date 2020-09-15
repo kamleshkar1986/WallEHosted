@@ -1,0 +1,17 @@
+<div class="row img-grid my-3 px-1 px-sm-2 mx-1 mx-sm-3 rounded">
+    <div class="col-12 pt-2 d-flex justify-content-center collection-title rounded">  
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col px-1 mb-1">
+                        <button class="btn btn-outline-primary btn-sm justify-content-center" (click)="sortByLetterClick('New')">New</button>                 
+                    </div>
+                    <div class="col px-1 mb-1" *ngFor="let code of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')">
+                        <button class="btn btn-outline-primary btn-sm justify-content-center" (click)="sortByLetterClick(code)">{{ code }}</button>    
+                    </div>
+                </div>
+            </div>
+            
+        </div>        
+    </div>
+</div>

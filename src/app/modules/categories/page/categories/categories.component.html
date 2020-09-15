@@ -1,0 +1,8 @@
+<app-alphabet-sorter *ngIf="categoryTitle != 'Category'" (sortValueClick)="applySort($event)"></app-alphabet-sorter>
+<app-image-grid 
+    [thumbImgArr] = "htmlProvider.thumbImgArr"
+    [title] = "categoryTitle"
+    [showPrevNextBtn] = "isSortingApplied"
+    (thumbImgClick)="openCollection($event)"
+    (prevNextClick)="applySort($event)">
+</app-image-grid>
