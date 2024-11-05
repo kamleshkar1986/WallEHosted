@@ -1,0 +1,50 @@
+name: Add security coaches
+description: Assign security coach role to AppSecInsights users(s)
+title: 'Add security coaches'
+labels: 'Add security coach'
+body:
+- type: textarea
+  id: coach_csv
+  attributes:
+    label: I want to assign the "Security Coach" role to the following user(s) 
+    description: "The User ID is also referred to as: Short ID, EMEA ID etc. You can find the User ID in MB-Inside. For example, the User ID of [Ola Källenius is OK2100](https://mbinside.app.corpintra.net/person/OK2100)."   
+    value: |
+      1. <User ID 1>
+      2. <User ID 2>  
+      3. ...     
+    render: bash
+  validations:
+    required: true
+- type: dropdown
+  id: chapter_lead
+  attributes:
+    label: The chapter lead of the coaches is
+    options:  
+      - <Select chapter lead>
+      - MBRDI (ITH/I) | Thakur, Shshank (623) | shshank.thakur@mercedes-benz.com
+      - MBRDI (ITH/I) | Pandey, Anupama (623) | anupama.pandey@mercedes-benz.com
+      - ITS | Simon, Michael MS. (000) | michael.ms.simon@mercedes-benz.com
+      - ITO | Weimer, Ralf (010) | ralf.weimer@mercedes-benz.com
+      - MBTI (ITH/T) | Mayer, Maximilian (415) | maximilian.mayer@mercedes-benz.com
+      - MBT Motion (ITH/TM) | Shahen, Abdullah (628) | abdullah.shahen@mercedes-benz.com
+      - MBT Malaysia (ITH/T) | Teo, Keng Fuu (633) | keng_fuu.teo@mercedes-benz.com
+      - ITV | Rungta, Chanchal (008) | chanchal.rungta@mercedes-benz.com
+    default: 0
+    
+  validations:
+    required: true  
+- type: markdown
+  attributes:
+    value: |
+      IMPORTANT: The Definition of Done (DOD) is a checklist for members of the AppSecInsights team. As a user you do not need to do anything other than providing the User ID(s) of the security coaches.
+
+      **DOD ( #1223 )**
+      _(please check the definition of done where possible otherwise give a reason)_
+      - [ ] Valid short IDs of users provided in the description
+      - [ ] User ID(s) appended (as csv) to github environment variable `LIST_OF_SEC_COACHES` for `PR`
+      - [ ] User ID(s) appended (as csv) to github environment variable `LIST_OF_SEC_COACHES` for `STAGING`
+      - [ ] User ID(s) appended (as csv) to github environment variable `LIST_OF_SEC_COACHES` for `PROD`
+      - [ ] Run the github workflow `Update - Coaches` on `PR` environment
+      - [ ] Run the github workflow `Update - Coaches` on `STAGING` environment
+      - [ ] Run the github workflow `Update - Coaches` on `PROD` environment
+
