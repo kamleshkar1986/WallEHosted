@@ -20,7 +20,7 @@ body:
   attributes:
     label: The chapter lead of the coaches is
     options:  
-      - <Select chapter lead>
+      - 
       - MBRDI (ITH/I) | Thakur, Shshank (623) | shshank.thakur@mercedes-benz.com
       - MBRDI (ITH/I) | Pandey, Anupama (623) | anupama.pandey@mercedes-benz.com
       - ITS | Simon, Michael MS. (000) | michael.ms.simon@mercedes-benz.com
@@ -28,9 +28,7 @@ body:
       - MBTI (ITH/T) | Mayer, Maximilian (415) | maximilian.mayer@mercedes-benz.com
       - MBT Motion (ITH/TM) | Shahen, Abdullah (628) | abdullah.shahen@mercedes-benz.com
       - MBT Malaysia (ITH/T) | Teo, Keng Fuu (633) | keng_fuu.teo@mercedes-benz.com
-      - ITV | Rungta, Chanchal (008) | chanchal.rungta@mercedes-benz.com
-    default: 0
-    
+      - ITV | Rungta, Chanchal (008) | chanchal.rungta@mercedes-benz.com  
   validations:
     required: true  
 - type: markdown
